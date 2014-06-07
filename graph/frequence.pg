@@ -1,0 +1,18 @@
+#!/usr/bin/gnuplot
+reset
+
+set terminal png large
+set output "frequence.png"
+set boxwidth 0.75 absolute
+set style fill solid 1.00 border -1
+set style histogram rowstacked
+set style data histograms
+set xtics 0.1
+set mytics 0.05
+set ytics 0.05
+set yr [0.0:0.10]
+set ylabel "Frequence"
+set xlabel "Acide amine"
+set grid
+
+plot 'frequence.dat' using 2:xtic(1) t "Frequence"

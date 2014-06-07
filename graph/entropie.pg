@@ -1,0 +1,19 @@
+#!/usr/bin/gnuplot
+
+reset
+
+set terminal png
+set output "Entropie.png"
+set boxwidth 0.75 absolute
+
+set xtic auto                          # set xtics automatically
+set ytic auto                          # set ytics automatically
+set title "Entropie"
+set xlabel "Position"
+set ylabel "Entropie"
+set label "Yield Point" at 0.003,260
+set arrow from 0.0028,250 to 0.003,280
+set grid
+set xr [0:50]
+set yr [0.00:5.00]
+plot    "entropie.dat" using 1:2 title 'Entropie en fonction de la position' with linespoints

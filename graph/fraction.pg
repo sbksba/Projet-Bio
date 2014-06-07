@@ -1,0 +1,19 @@
+#!/usr/bin/gnuplot
+
+reset
+
+set terminal png
+set output "Fraction.png"
+set boxwidth 0.75 absolute
+
+set xtic auto                          # set xtics automatically
+set ytic auto                          # set ytics automatically
+set title "Fraction"
+set xlabel "Nombre de paire"
+set ylabel "Pourcentage"
+set label "Yield Point" at 0.003,260
+set arrow from 0.0028,250 to 0.003,280
+set grid
+set xr [1:50]
+set yr [0:100.00]
+plot    "fraction.dat" using 1:2 title 'Fraction en fonction du nombre de paire' with linespoints

@@ -1,0 +1,20 @@
+#!/usr/bin/gnuplot
+
+reset
+
+set terminal png
+set output "Vraisemblance.png"
+set boxwidth 0.75 absolute
+
+set xtic auto                          # set xtics automatically
+set ytic auto                          # set ytics automatically
+set title "Vraisemblance"
+set xlabel "Position"
+set ylabel "Indice de vraisemblance"
+set label "Yield Point" at 0.003,260
+set arrow from 0.0028,250 to 0.003,280
+set grid
+set xr [0:66]
+set yr [-170.00:75.00]
+plot    "vraisemblance.dat" using 1:2 title 'Vraisemblance en fonction de la position' with linespoints, \
+	0 with lines

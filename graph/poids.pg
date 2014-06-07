@@ -1,0 +1,38 @@
+#!/usr/bin/gnuplot
+
+reset
+
+set terminal png
+set output "Poids.png"
+set boxwidth 0.75 absolute
+
+set xtic auto                          # set xtics automatically
+set ytic auto                          # set ytics automatically
+set title "Poids"
+set xlabel "Position"
+set ylabel "Poids"
+set label "Yield Point" at 0.003,260
+set arrow from 0.0028,250 to 0.003,280
+set xr [0:46]
+set yr [2.00E-4:1.00]
+plot    "poids.dat" using 1:2 title 'Acide amine A' with linespoints, \
+	"poids.dat" using 1:3 title 'Acide amine C' with linespoints, \
+	"poids.dat" using 1:4 title 'Acide amine D' with linespoints, \
+	"poids.dat" using 1:5 title 'Acide amine E' with linespoints, \
+	"poids.dat" using 1:6 title 'Acide amine F' with linespoints, \
+	"poids.dat" using 1:7 title 'Acide amine G' with linespoints, \
+	"poids.dat" using 1:8 title 'Acide amine H' with linespoints, \
+	"poids.dat" using 1:9 title 'Acide amine I' with linespoints, \
+	"poids.dat" using 1:10 title 'Acide amine K' with linespoints, \
+	"poids.dat" using 1:11 title 'Acide amine L' with linespoints, \
+	"poids.dat" using 1:12 title 'Acide amine M' with linespoints, \
+	"poids.dat" using 1:13 title 'Acide amine N' with linespoints, \
+	"poids.dat" using 1:14 title 'Acide amine P' with linespoints, \
+	"poids.dat" using 1:15 title 'Acide amine Q' with linespoints, \
+	"poids.dat" using 1:16 title 'Acide amine R' with linespoints, \
+	"poids.dat" using 1:17 title 'Acide amine S' with linespoints, \
+	"poids.dat" using 1:18 title 'Acide amine T' with linespoints, \
+	"poids.dat" using 1:19 title 'Acide amine V' with linespoints, \
+	"poids.dat" using 1:20 title 'Acide amine W' with linespoints, \
+	"poids.dat" using 1:21 title 'Acide amine Y' with linespoints, \
+	"poids.dat" using 1:22 title 'Acide amine -' with linespoints
